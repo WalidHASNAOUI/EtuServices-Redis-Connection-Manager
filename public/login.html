@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+</head>
+<body>
+  <h1>Login</h1>
+  <form id="loginForm">
+    <label>Email:</label><br/>
+    <input type="text" name="email" id="email" /><br/>
+    <label>Password:</label><br/>
+    <input type="password" name="password" id="password" /><br/><br/>
+    <button type="submit">Login</button>
+  </form>
+  <script>
+    const form = document.getElementById('loginForm');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      const res = await fetch('/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ email, password })
+      });
+      const data = await res.json();
+      if (res.status === 200) {
+        alert('Login successful: ' + data.user.firstname);
+        // redirect to services page
+        window.location.href = '/accueil';
+      } else {
+        alert('Login failed: ' + data.msg);
+      }
+    });
+  </script>
+</body>
+</html>

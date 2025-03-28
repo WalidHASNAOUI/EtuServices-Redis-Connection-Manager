@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - EtuServices</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Services - EtuServices</h1>
+        <nav>
+            <ul>
+                <li><a href="accueil">Accueil</a></li>
+                <li><a href="login.html">Déconnexion</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="services">
+        <h2>Nos services</h2>
+        <div class="service-option">
+            <h3>Vente</h3>
+            <p>Vendez vos articles facilement sur notre plateforme.</p>
+            <button onclick="startSelling()">Commencer à vendre</button>
+        </div>
+        <div class="service-option">
+            <h3>Achat</h3>
+            <p>Trouvez des articles à des prix intéressants.</p>
+            <button onclick="startBuying()">Commencer à acheter</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 EtuServices</p>
+    </footer>
+
+    <script>
+        function startSelling() {
+            alert("Vous avez choisi de vendre des articles.");
+            
+        }
+
+        function startBuying() {
+            alert("Vous avez choisi d'acheter des articles.");
+            
+        }
+    </script>
+</body>
+</html>

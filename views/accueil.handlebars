@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - EtuServices</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Bienvenue sur EtuServices</h1>
+        <nav>
+            <ul>
+                <li><a href="login.html">Se connecter</a></li>
+                <li><a href="services.html">Nos Services</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="main-content">
+        <h2>Que proposons-nous ?</h2>
+        <p>Notre plateforme permet à chaque utilisateur de vendre et d'acheter des articles facilement.</p>
+        <p>Accédez à nos services pour en savoir plus.</p>
+
+        <!-- User Statistics Table -->
+        <h2>Statistiques des utilisateurs</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>Email</th>
+                    <th>Connexions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each users}}
+                    <tr>
+                        <td>{{this.lastname}}</td>
+                        <td>{{this.firstname}}</td>
+                        <td>{{this.email}}</td>
+                        <td>{{this.connections}}</td>
+                    </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 EtuServices</p>
+    </footer>
+</body>
+</html>
