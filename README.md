@@ -108,17 +108,6 @@ The architecture of the EtuServices platform consists of the following component
 
 - Database (SQLite): Stores user information such as name, email, and password.
 
-### Diagram of the System
-
-The following diagram provides an overview of how the system components interact with each other:
-
-+---------------+        +-----------------+        +------------+
-| User (Frontend) | <--> | Express.js API  | <--> | Redis (Flask) |
-+---------------+        +-----------------+        +------------+
-                          |                   |
-                      +---------------+   +---------------+
-                      |  SQLite DB    |   |   Redis DB    |
-                      +---------------+   +---------------+
 
 ### Workflow
 
